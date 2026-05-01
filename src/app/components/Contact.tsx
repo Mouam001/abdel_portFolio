@@ -11,7 +11,7 @@ export function Contact() {
     <section id="contact" className="py-32 bg-white relative overflow-hidden">
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-t from-[#EAF1FB] to-transparent rounded-full filter blur-3xl opacity-50" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -81,7 +81,7 @@ export function Contact() {
             </motion.a>
 
             <motion.a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/profile.php?id=61572129917797"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

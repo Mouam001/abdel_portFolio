@@ -42,7 +42,7 @@ export function Experience() {
     <section id="experience" className="py-32 bg-white relative overflow-hidden">
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-gradient-to-bl from-[#EAF1FB] to-transparent rounded-full filter blur-3xl opacity-50" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export function Experience() {
           </h2>
 
           <div className="max-w-4xl mx-auto relative">
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#00A86B] via-[#00A86B]/50 to-transparent" />
+            <div className="absolute left-8 max-[379px]:left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#00A86B] via-[#00A86B]/50 to-transparent" />
 
             {experiences.map((exp, index) => (
               <motion.div
@@ -63,12 +63,12 @@ export function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="mb-12 relative pl-20"
+                className="mb-12 relative pl-20 max-[379px]:pl-14"
               >
-                <div className="absolute left-5 top-0 w-6 h-6 bg-[#00A86B] rounded-full border-4 border-white shadow-lg" />
+                <div className="absolute left-5 max-[379px]:left-3 top-0 w-6 h-6 bg-[#00A86B] rounded-full border-4 border-white shadow-lg" />
 
-                <div className="bg-white rounded-2xl p-6 hover:shadow-xl transition-all duration-300 group shadow-md border border-[#f1f5f9]">
-                  <div className="flex items-start justify-between mb-3">
+                <div className="bg-white rounded-2xl p-4 sm:p-6 hover:shadow-xl transition-all duration-300 group shadow-md border border-[#f1f5f9]">
+                  <div className="mb-3 flex flex-col sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <h3 className="text-[#1e293b] mb-1" style={{ fontSize: '1.25rem', fontWeight: 600 }}>
                         {exp.title}
@@ -77,7 +77,7 @@ export function Experience() {
                         <p className="text-[#00A86B] mb-2">{exp.company}</p>
                       )}
                     </div>
-                    <span className="text-[#64748b] text-sm whitespace-nowrap ml-4">
+                    <span className="mt-1 text-[#64748b] text-xs sm:text-sm whitespace-nowrap sm:ml-4 sm:mt-0">
                       {exp.period}
                     </span>
                   </div>

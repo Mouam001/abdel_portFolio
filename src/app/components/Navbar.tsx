@@ -42,7 +42,7 @@ export function Navbar() {
           : "bg-white/80 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center gap-4">
             <div className="relative group">
@@ -118,7 +118,7 @@ export function Navbar() {
             transition={{ duration: 0.3 }}
             className="lg:hidden border-t border-[#e2e8f0] bg-white/95 backdrop-blur-md overflow-hidden"
           >
-            <div className="container mx-auto px-6 py-6 space-y-4">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-4">
               {navLinks.map((link, index) => (
                 <motion.a
                   key={index}

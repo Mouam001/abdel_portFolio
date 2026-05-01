@@ -1,6 +1,6 @@
 import profileImage from "../../assets/images/Abdel2.png";
 import { motion } from "motion/react";
-import { ArrowRight, Shield, Cloud, Lock } from "lucide-react";
+import { ArrowRight, Shield, Cloud, Lock, Download } from "lucide-react";
 
 const whatsappMessage = encodeURIComponent(
   "Bonjour M. Ben Said, je souhaite échanger avec vous au sujet d'une collaboration sur un projet de sécurité/infrastructure. Pouvez-vous me recontacter, s'il vous plaît ?",
@@ -37,7 +37,7 @@ export function Hero() {
         ))}
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -49,7 +49,7 @@ export function Hero() {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-center lg:text-left"
+              className="w-full overflow-hidden text-center lg:text-left"
             >
               <motion.div
                 initial={{ opacity: 0 }}
@@ -72,8 +72,8 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="mb-4 text-[#1e293b]"
-                style={{ fontSize: '3.8rem', fontWeight: 700, lineHeight: 1.05 }}
+                className="mb-4 text-[#1e293b] text-3xl sm:text-5xl lg:text-7xl break-words"
+                style={{ fontWeight: 700, lineHeight: 1.05 }}
               >
                 Abdourahamane AbdelWahab <span className="text-[#00A86B]">Ben Said</span>
               </motion.h1>
@@ -82,7 +82,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mb-6 text-[#64748b]"
+                className="mb-6 px-4 text-center text-[#64748b] max-w-full lg:px-0 lg:text-left"
                 style={{ fontSize: '1.5rem' }}
               >
                 Security Engineer | Network & Infrastructure Security | DevSecOps
@@ -92,7 +92,7 @@ export function Hero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-10 text-[#475569] max-w-3xl"
+                className="mb-10 px-4 text-center text-[#475569] max-w-full lg:max-w-3xl lg:px-0 lg:text-left"
                 style={{ fontSize: '1.2rem', lineHeight: 1.8 }}
               >
                 Ingénieur en sécurité spécialisé dans la conception et la sécurisation d’infrastructures réseau,systeme et cloud fiables et évolutives. J’interviens sur des environnements modernes en combinant sécurité, automatisation et bonnes pratiques DevSecOps afin de renforcer la résilience des systèmes. J’intègre la sécurité tout au long du cycle de vie des projets (CI/CD, Kubernetes, systèmes distribués), avec une attention particulière portée à la réduction des risques, la performance et la visibilité des environnements, pour délivrer des solutions robustes à forte valeur opérationnelle.
@@ -104,14 +104,24 @@ export function Hero() {
                 transition={{ delay: 0.7 }}
                 className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4"
               >
-                <a
-                  href={whatsappLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-[#00A86B] text-white rounded-xl hover:bg-[#008f5c] transition-all duration-300 shadow-lg shadow-[#00A86B]/20 hover:shadow-xl hover:shadow-[#00A86B]/30"
-                >
-                  Me contacter
-                </a>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
+                  <a
+                    href="/cv.pdf"
+                    download="CV_AbdelWahab_Ben_Said.pdf"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent border-2 border-[#00A86B] text-[#00A86B] rounded-full font-semibold hover:bg-[#00A86B] hover:text-white transition-all duration-300 w-full sm:w-auto"
+                  >
+                    <Download className="w-4 h-4" />
+                    Télécharger CV
+                  </a>
+                  <a
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center px-8 py-4 bg-[#00A86B] text-white rounded-xl hover:bg-[#008f5c] transition-all duration-300 shadow-lg shadow-[#00A86B]/20 hover:shadow-xl hover:shadow-[#00A86B]/30 w-full sm:w-auto"
+                  >
+                    Me contacter
+                  </a>
+                </div>
                 <a
                   href="#projects"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white border border-[#e2e8f0] text-[#00A86B] rounded-xl hover:border-[#00A86B] transition-all duration-300 shadow-sm hover:shadow-md"

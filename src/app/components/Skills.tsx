@@ -32,7 +32,7 @@ export function Skills() {
     <section id="skills" className="py-32 bg-gradient-to-b from-[#F8FAFC] to-[#F5F7FA] relative overflow-hidden">
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gradient-to-tr from-[#EAF1FB] to-transparent rounded-full filter blur-3xl opacity-40" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
